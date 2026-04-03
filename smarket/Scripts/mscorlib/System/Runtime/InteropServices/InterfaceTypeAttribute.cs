@@ -1,0 +1,16 @@
+namespace System.Runtime.InteropServices
+{
+	/// <summary>Indicates whether a managed interface is dual, dispatch-only, or <see langword="IUnknown" /> -only when exposed to COM.</summary>
+	[AttributeUsage(AttributeTargets.Interface, Inherited = false)]
+	[ComVisible(true)]
+	public sealed class InterfaceTypeAttribute : Attribute
+	{
+		internal ComInterfaceType _val;
+
+		/// <summary>Initializes a new instance of the <see cref="T:System.Runtime.InteropServices.InterfaceTypeAttribute" /> class with the specified <see cref="T:System.Runtime.InteropServices.ComInterfaceType" /> enumeration member.</summary>
+		/// <param name="interfaceType">One of the <see cref="T:System.Runtime.InteropServices.ComInterfaceType" /> values that describes how the interface should be exposed to COM clients. </param>
+		public InterfaceTypeAttribute(ComInterfaceType interfaceType)
+		{
+		}
+	}
+}

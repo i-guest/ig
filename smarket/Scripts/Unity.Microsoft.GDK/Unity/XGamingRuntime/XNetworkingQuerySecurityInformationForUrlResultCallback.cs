@@ -1,0 +1,4 @@
+namespace Unity.XGamingRuntime
+{
+	public delegate void XNetworkingQuerySecurityInformationForUrlResultCallback(int errorCode, XNetworkingSecurityInformation result);
+}

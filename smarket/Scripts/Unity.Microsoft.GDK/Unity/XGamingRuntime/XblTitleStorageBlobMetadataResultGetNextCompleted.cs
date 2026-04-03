@@ -1,0 +1,4 @@
+namespace Unity.XGamingRuntime
+{
+	public delegate void XblTitleStorageBlobMetadataResultGetNextCompleted(int hresult, XblTitleStorageBlobMetadataResultHandle result);
+}

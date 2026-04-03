@@ -1,0 +1,31 @@
+using Unity.XGamingRuntime.Interop;
+using UnityEngine.Scripting.APIUpdating;
+
+namespace Unity.XGamingRuntime
+{
+	[MovedFrom("Unity.GameCore")]
+	public class XblLeaderboardRow
+	{
+		public string Gamertag { get; private set; }
+
+		public string ModernGamertag { get; private set; }
+
+		public string ModernGamertagSuffix { get; private set; }
+
+		public string UniqueModernGamertag { get; private set; }
+
+		public ulong XboxUserId { get; private set; }
+
+		public double Percentile { get; private set; }
+
+		public uint Rank { get; private set; }
+
+		public uint GlobalRank { get; private set; }
+
+		public string[] ColumnValues { get; private set; }
+
+		internal XblLeaderboardRow(Unity.XGamingRuntime.Interop.XblLeaderboardRow interopRow)
+		{
+		}
+	}
+}

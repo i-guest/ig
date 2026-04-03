@@ -1,0 +1,42 @@
+using System;
+using UnityEngine.Bindings;
+using UnityEngine.Scripting;
+
+namespace UnityEngine.TextCore.LowLevel
+{
+	[Serializable]
+	[VisibleToOtherModules(new string[] { "UnityEngine.TextCoreTextEngineModule" })]
+	[UsedByNativeCode]
+	internal struct GlyphAnchorPoint
+	{
+		[SerializeField]
+		[NativeName("xPositionAdjustment")]
+		private float m_XCoordinate;
+
+		[NativeName("yPositionAdjustment")]
+		[SerializeField]
+		private float m_YCoordinate;
+
+		public float xCoordinate
+		{
+			get
+			{
+				return 0f;
+			}
+			set
+			{
+			}
+		}
+
+		public float yCoordinate
+		{
+			get
+			{
+				return 0f;
+			}
+			set
+			{
+			}
+		}
+	}
+}

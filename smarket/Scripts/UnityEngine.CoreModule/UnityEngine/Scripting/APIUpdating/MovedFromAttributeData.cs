@@ -1,0 +1,26 @@
+using UnityEngine.Bindings;
+
+namespace UnityEngine.Scripting.APIUpdating
+{
+	[VisibleToOtherModules(new string[] { "UnityEngine.UIElementsModule" })]
+	internal struct MovedFromAttributeData
+	{
+		public string className;
+
+		public string nameSpace;
+
+		public string assembly;
+
+		public bool classHasChanged;
+
+		public bool nameSpaceHasChanged;
+
+		public bool assemblyHasChanged;
+
+		public bool autoUdpateAPI;
+
+		public void Set(bool autoUpdateAPI, string sourceNamespace = null, string sourceAssembly = null, string sourceClassName = null)
+		{
+		}
+	}
+}
