@@ -1,0 +1,11 @@
+namespace System.Collections.Generic
+{
+	/// <summary>Exposes the enumerator, which supports a simple iteration over a collection of a specified type.To browse the .NET Framework source code for this type, see the Reference Source.</summary>
+	/// <typeparam name="T">The type of objects to enumerate.</typeparam>
+	public interface IEnumerable<out T> : IEnumerable
+	{
+		/// <summary>Returns an enumerator that iterates through the collection.</summary>
+		/// <returns>An enumerator that can be used to iterate through the collection.</returns>
+		new IEnumerator<T> GetEnumerator();
+	}
+}

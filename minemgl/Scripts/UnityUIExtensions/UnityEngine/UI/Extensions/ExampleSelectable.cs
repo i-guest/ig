@@ -1,0 +1,79 @@
+using TMPro;
+
+namespace UnityEngine.UI.Extensions
+{
+	public class ExampleSelectable : MonoBehaviour, IBoxSelectable
+	{
+		private bool _selected;
+
+		private bool _preSelected;
+
+		private SpriteRenderer spriteRenderer;
+
+		private Image image;
+
+		private TMP_Text text;
+
+		public bool selected
+		{
+			get
+			{
+				return _selected;
+			}
+			set
+			{
+				_selected = value;
+			}
+		}
+
+		public bool preSelected
+		{
+			get
+			{
+				return _preSelected;
+			}
+			set
+			{
+				_preSelected = value;
+			}
+		}
+
+		Transform IBoxSelectable.transform => base.transform;
+
+		private void Start()
+		{
+			spriteRenderer = base.transform.GetComponent<SpriteRenderer>();
+			image = base.transform.GetComponent<Image>();
+			text = base.transform.GetComponent<TMP_Text>();
+		}
+
+		private void Update()
+		{
+			Color color = Color.white;
+			if (preSelected)
+			{
+				color = Color.yellow;
+			}
+			if (selected)
+			{
+				color = Color.green;
+			}
+			if ((bool)spriteRenderer)
+			{
+				spriteRenderer.color = color;
+			}
+			else if ((bool)text)
+			{
+				text.color = color;
+			}
+			else if ((bool)image)
+			{
+				image.color = color;
+			}
+			else if ((bool)GetComponent<Renderer>())
+			{
+				GetComponent<Renderer>().material.color = color;
+			}
+		}
+	}
+}
