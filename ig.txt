@@ -1,0 +1,10 @@
+git init
+git remote add origin https://github.com/i-guest/ig.git
+git branch -M main
+git add .
+git commit -m "ig"
+git push -u origin main
+
+git add .
+git commit "smarket minemgl"
+git push
